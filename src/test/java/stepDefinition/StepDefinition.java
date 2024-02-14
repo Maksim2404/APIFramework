@@ -10,6 +10,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.assertj.core.api.Assertions;
+import resources.APIResources;
 import resources.TestDataBuild;
 import resources.Utils;
 
@@ -31,7 +32,10 @@ public class StepDefinition extends Utils {
     }
 
     @When("User calls {string} with Post http request")
-    public void user_calls_with_post_http_request(String string) {
+    public void user_calls_with_post_http_request(String resource) {
+
+        APIResources resourceAPI = APIResources.valueOf(resource);
+        System.out.println(resourceAPI.getResource());
 
         resSpec = new ResponseSpecBuilder()
                 .expectStatusCode(200)
@@ -65,5 +69,9 @@ public class StepDefinition extends Utils {
         } else {
             Assertions.fail("The key '" + keyValue + "' is not present in the response body or is null.");
         }
+    }
+
+    @When("User calls {string} with {string} http request")
+    public void userCallsWithHttpRequest(String arg0, String arg1) {
     }
 }

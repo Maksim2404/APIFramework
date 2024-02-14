@@ -15,20 +15,24 @@ import java.util.Properties;
 
 public class Utils {
 
-    RequestSpecification req;
+    public static RequestSpecification req;
 
     public RequestSpecification requestSpecification() throws IOException {
 
-        PrintStream log = new PrintStream(Files.newOutputStream(Paths.get("logging.txt")));
+        if (req == null) {
 
-        req = new RequestSpecBuilder()
-                .setBaseUri(getGlobalValue("baseUrl"))
-                .addQueryParam("key", "qaclick123")
-                .addFilter(RequestLoggingFilter.logRequestTo(log))
-                .addFilter(ResponseLoggingFilter.logResponseTo(log))
-                .setContentType(ContentType.JSON)
-                .build();
+            PrintStream log = new PrintStream(Files.newOutputStream(Paths.get("logging.txt")));
 
+            req = new RequestSpecBuilder()
+                    .setBaseUri(getGlobalValue("baseUrl"))
+                    .addQueryParam("key", "qaclick123")
+                    .addFilter(RequestLoggingFilter.logRequestTo(log))
+                    .addFilter(ResponseLoggingFilter.logResponseTo(log))
+                    .setContentType(ContentType.JSON)
+                    .build();
+
+            return req;
+        }
         return req;
     }
 

@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4454cc48-109b-4bb5-9902-8aac5ba62287" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/placeValidation.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/resources/TestDataBuild.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/resources/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/resources/global.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinition/StepDefinition.java" afterDir="false" />
+    <list default="true" id="4454cc48-109b-4bb5-9902-8aac5ba62287" name="Changes" comment="Refactoring feature file and optimized data usage">
+      <change afterPath="$PROJECT_DIR$/src/test/java/resources/APIResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logging.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logging.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/placeValidation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/placeValidation.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinition/StepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinition/StepDefinition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaOpenWeatherProject" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaOpenWeatherProject" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,8 +100,18 @@
       <workItem from="1706067593859" duration="665000" />
       <workItem from="1706199558262" duration="2806000" />
       <workItem from="1707237717375" duration="396000" />
-      <workItem from="1707752025694" duration="3468000" />
+      <workItem from="1707752025694" duration="4169000" />
+      <workItem from="1707927992049" duration="2599000" />
     </task>
+    <task id="LOCAL-00001" summary="Refactoring feature file and optimized data usage">
+      <option name="closed" value="true" />
+      <created>1707756825989</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707756825989</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,5 +127,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactoring feature file and optimized data usage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring feature file and optimized data usage" />
   </component>
 </project>

@@ -27,7 +27,7 @@ Body:
     ]
 }
 HTTP/1.1 200 OK
-Date: Mon, 12 Feb 2024 16:50:32 GMT
+Date: Wed, 14 Feb 2024 16:44:53 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,8 +40,55 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "b1248b5f680911d6a1a994fc08d2e0a2",
+    "place_id": "b31bdfa537cc28d8d6301741d3ca7bc1",
     "scope": "APP",
-    "reference": "d240f8cdd1cd9af3f0bb0da440664051d240f8cdd1cd9af3f0bb0da440664051",
-    "id": "d240f8cdd1cd9af3f0bb0da440664051"
+    "reference": "e0f74689e60a1b793a40c28fb0ee9503e0f74689e60a1b793a40c28fb0ee9503",
+    "id": "e0f74689e60a1b793a40c28fb0ee9503"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 50,
+    "name": "BBhouse",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Sea cross center",
+    "website": "https://rahulshettyacademy.com",
+    "language": "Spanish",
+    "location": {
+        "lat": -38.383494,
+        "lng": 33.427362
+    },
+    "types": [
+        "shoe park",
+        "shop"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Wed, 14 Feb 2024 16:44:54 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "9566e5f1b69e5b8d74aed7a63ba329e4",
+    "scope": "APP",
+    "reference": "e095714e7ca0f084912baaae8479c026e095714e7ca0f084912baaae8479c026",
+    "id": "e095714e7ca0f084912baaae8479c026"
 }
