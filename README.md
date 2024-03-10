@@ -1,4 +1,4 @@
-# Cucumber BDD API Automation Framework | Rest Assured Project 
+# Cucumber BDD API Automation Framework | Rest Assured Project | JAVA 17
 
 This repository contains a Java-based automation framework for testing Place APIs using Cucumber, JUnit, and RestAssured. The framework allows you to add and delete places through API calls and validate the responses.
 
