@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4454cc48-109b-4bb5-9902-8aac5ba62287" name="Changes" comment="Refactoring feature file and optimized data usage">
-      <change afterPath="$PROJECT_DIR$/src/test/java/resources/APIResources.java" afterDir="false" />
+    <list default="true" id="4454cc48-109b-4bb5-9902-8aac5ba62287" name="Changes" comment="Refactoring feature file and created enum class and methods">
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinition/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logging.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logging.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/Options/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/Options/TestRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/placeValidation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/placeValidation.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/TestDataBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/TestDataBuild.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/resources/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinition/StepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinition/StepDefinition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaOpenWeatherProject" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaOpenWeatherProject" afterDir="false" />
@@ -50,6 +54,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -83,6 +91,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
         <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
       </set>
     </attachedChunks>
@@ -101,7 +110,19 @@
       <workItem from="1706199558262" duration="2806000" />
       <workItem from="1707237717375" duration="396000" />
       <workItem from="1707752025694" duration="4169000" />
-      <workItem from="1707927992049" duration="2599000" />
+      <workItem from="1707927992049" duration="2661000" />
+      <workItem from="1708399164427" duration="7794000" />
+      <workItem from="1708620458089" duration="1287000" />
+      <workItem from="1708703801515" duration="3653000" />
+      <workItem from="1709003207272" duration="861000" />
+      <workItem from="1709006381477" duration="1140000" />
+      <workItem from="1709007565555" duration="55000" />
+      <workItem from="1709007834183" duration="1370000" />
+      <workItem from="1709092224830" duration="1546000" />
+      <workItem from="1709223704024" duration="765000" />
+      <workItem from="1709911433880" duration="2463000" />
+      <workItem from="1710031475286" duration="2727000" />
+      <workItem from="1710170036969" duration="650000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring feature file and optimized data usage">
       <option name="closed" value="true" />
@@ -111,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707756825989</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactoring feature file and created enum class and methods">
+      <option name="closed" value="true" />
+      <created>1707930649447</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707930649447</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +159,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactoring feature file and optimized data usage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring feature file and optimized data usage" />
+    <MESSAGE value="Refactoring feature file and created enum class and methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring feature file and created enum class and methods" />
   </component>
 </project>

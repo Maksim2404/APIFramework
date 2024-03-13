@@ -1,11 +1,11 @@
 package stepDefinition;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -24,6 +24,7 @@ public class StepDefinition extends Utils {
     ResponseSpecification resSpec;
     Response response;
     TestDataBuild testDataBuild = new TestDataBuild();
+    static String placeId;
 
     @Given("Add place payload {string} {string} {string}")
     public void add_place_payload(String name, String language, String address) throws IOException {
@@ -31,9 +32,10 @@ public class StepDefinition extends Utils {
         res = given().spec(requestSpecification()).body(testDataBuild.addPlacePayload(name, language, address));
     }
 
-    @When("User calls {string} with Post http request")
-    public void user_calls_with_post_http_request(String resource) {
+    @When("User calls {string} with {string} http request")
+    public void userCallsWithHttpRequest(String resource, String method) {
 
+        /*constructor will be called with 'valueOf' resource you pass!*/
         APIResources resourceAPI = APIResources.valueOf(resource);
         System.out.println(resourceAPI.getResource());
 
@@ -42,13 +44,12 @@ public class StepDefinition extends Utils {
                 .expectContentType(ContentType.JSON)
                 .build();
 
-        response = res
-                .when()
-                .post("/maps/api/place/add/json")
-                .then()
-                .spec(resSpec)
-                .extract()
-                .response();
+        if (method.equalsIgnoreCase("POST"))
+            response = res
+                    .when()
+                    .post(resourceAPI.getResource());
+        else if (method.equalsIgnoreCase("GET"))
+            response = res.when().get(resourceAPI.getResource());
     }
 
     @Then("The API call is success with status code {int}")
@@ -60,18 +61,26 @@ public class StepDefinition extends Utils {
     @Then("{string} in response body is {string}")
     public void in_response_body_is(String keyValue, String expectedValue) {
 
-        String resp = response.asString();
-        JsonPath js = new JsonPath(resp);
-
-        Object value = js.get(keyValue);
-        if (value != null) {
-            Assertions.assertThat(value.toString()).isEqualTo(expectedValue);
-        } else {
-            Assertions.fail("The key '" + keyValue + "' is not present in the response body or is null.");
-        }
+        Assertions.assertThat(getJsonPath(response, keyValue)).isEqualTo(expectedValue);
     }
 
-    @When("User calls {string} with {string} http request")
-    public void userCallsWithHttpRequest(String arg0, String arg1) {
+    @And("verify place_Id created maps to {string} using {string}")
+    public void verifyPlace_IdCreatedMapsToUsing(String expectedName, String resource) throws IOException {
+
+        placeId = getJsonPath(response, "place_id");
+
+        res = given().spec(requestSpecification()).queryParam("place_id", placeId);
+
+        userCallsWithHttpRequest(resource, "GET");
+
+        String actualName = getJsonPath(response, "name");
+
+        Assertions.assertThat(actualName).isEqualTo(expectedName);
+    }
+
+    @Given("Delete Place Payload")
+    public void deletePlacePayload() throws IOException {
+
+        res = given().spec(requestSpecification()).body(testDataBuild.deletePlacePayload(placeId));
     }
 }
